@@ -1,0 +1,16 @@
+.landing-nav {
+    background-color: purple;
+    color: white;
+    text-align: right;
+    font-size: 16px;
+}
+.landing-login-register-btn {
+    color: purple;
+    font-size: 16px;
+    font-weight: 600
+}
+.landing-footer-nav {
+    color: orangered;
+    font-size: 14px;
+    font-weight: 600
+}
