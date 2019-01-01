@@ -19,11 +19,6 @@ landing-login-register-btn li {
     font-size: 14px;
     font-weight: 600
 }
-.logo {
-    background: url('../assets/logo/logo2.jpeg') no-repeat center center;
-    width: 100px;
-    height: 100px
-}
 .back-image {
     background: url('../assets/landing-page/matr-image3') repeat center center;
     height: 400px;
