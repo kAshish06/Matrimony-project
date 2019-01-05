@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { ShellComponent } from './components/shell/shell.component';
+
 @NgModule({
-  declarations: [],
+  declarations: [ShellComponent],
+  exports: [ShellComponent],
   imports: [
     CommonModule
   ]
