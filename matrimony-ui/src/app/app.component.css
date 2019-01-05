@@ -1,39 +1,55 @@
 .landing-nav {
-    background-color: rgb(194, 104, 146);
+    background-color: red;
     color: white;
     text-align: right;
-    font-size: 17px;
-    font-weight: 600;
-    padding: 10px 20px;
-    margin: 3px 0px 2px 0px
+    font-size: 15px;
+    font-weight: 400;
+    padding: 1px 20px;
+    margin: 3px 0px
 }
+
+.landing-nav li {
+    border-right: 1px solid white
+}
+
 .landing-login-register-btn {
+    background-color: red;
     color: white;
     font-size: 16px;
     width: 100px
 }
-landing-login-register-btn li {
-    background-color: red
-}
+
 .landing-footer-nav {
     font-size: 14px;
-    font-weight: 600
+    border-top: 4px solid red;
+    border-bottom: 4px solid red;
 }
 .back-image {
-    background: url('../assets/landing-page/matr-image3') repeat center center;
+    background: url('../assets/landing-page/matr_banner.png') repeat center center;
     height: 400px;
 }
+
+.toran {
+    background: url('../assets/landing-page/matr_toran.png');
+    height: 60px
+}
+.swastik_kalash {
+    background: url('../assets/landing-page/matr_swastik_kalash.png');
+    height: 45px
+}
 .action-btn-circle {
-    margin: 10px;
-    color: white;
-    width: 150px;
-    border-radius: 100px;
-    padding: 10px 20px;
+    margin: 10px 5px;
+    color: maroon;
+    width: 50px;
+    height: 70px;
+    vertical-align: middle;
+    border: 1px solid maroon;
+    border-radius: 5px;
     text-align: center
 }
 @media only screen and (max-width: 768px) {
     .back-image {
-        background: url('../assets/landing-page/matr-image3') no-repeat center center;
+        background: url('../assets/landing-page/matr_banner.png') no-repeat center center;
         background-size: cover
     }
 }

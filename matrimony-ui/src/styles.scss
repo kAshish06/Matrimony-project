@@ -4,12 +4,15 @@ $fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 body {
+    background-color: #f1f8e9;
     font-size: 14px;
-    font-family: 'Roboto', sans-serif!important
+    font-family: 'Roboto', sans-serif!important;
+    margin: 0px
 }
 ul {
     list-style-type: none;
     margin: 0px;
+    padding: 0px;
     li {
         display: inline-block;
         padding: 10px
