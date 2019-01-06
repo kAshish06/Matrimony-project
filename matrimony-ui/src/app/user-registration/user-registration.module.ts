@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import {
   MatButtonModule,
   MatCardModule,
@@ -7,7 +7,10 @@ import {
   MatInputModule,
   MatSelectModule
 } from '@angular/material';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
+import { UserRegistrationService } from './services/user-registration.service';
 import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
 
 @NgModule({
@@ -16,11 +19,14 @@ import { UserRegistrationComponent } from './components/user-registration/user-r
   exports: [UserRegistrationComponent],
   imports: [
     CommonModule,
+    HttpClientModule,
     MatButtonModule,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
-  ]
+    MatSelectModule,
+    ReactiveFormsModule
+  ],
+  providers: [UserRegistrationService]
 })
 export class UserRegistrationModule { }

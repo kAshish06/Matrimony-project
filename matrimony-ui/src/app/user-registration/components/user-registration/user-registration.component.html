@@ -2,25 +2,33 @@
   Registration
 </div>
 <mat-card style="background-color: #fff; width: 50%; margin: 10px auto">
-  <mat-form-field class="registration-detail-item">
-    <input matInput placeholder="Name">
-  </mat-form-field>
-  <mat-form-field class="registration-detail-item">
-    <input matInput placeholder="Email">
-  </mat-form-field>
-  <mat-form-field class="registration-detail-item">
-    <input matInput placeholder="Mobile/phone">
-  </mat-form-field>
-  <mat-form-field class="registration-detail-item">
-    <mat-select placeholder="User Type">
-      <mat-option *ngFor="let userType of userTypes" [value]="userType">
-        {{userType}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-  <div style="width: 100%; text-align: right">
-    <button mat-flat-button color="accent" style="color: red">
-      Register
-    </button>
-  </div>
+  <form [formGroup]="registrationFormGroup">
+      <mat-form-field class="registration-detail-item-inline">
+        <input matInput placeholder="First Name *" formControlName="firstName">
+      </mat-form-field>
+      <mat-form-field class="registration-detail-item-inline">
+        <input matInput placeholder="Middle Name" formControlName="middleName">
+      </mat-form-field>
+      <mat-form-field class="registration-detail-item-inline">
+        <input matInput placeholder="Last Name *" formControlName="lastName">
+      </mat-form-field>
+      <mat-form-field class="registration-detail-item">
+        <input matInput placeholder="Email *" formControlName="email">
+      </mat-form-field>
+      <mat-form-field class="registration-detail-item">
+        <input matInput placeholder="Mobile/phone *" formControlName="contact">
+      </mat-form-field>
+      <mat-form-field class="registration-detail-item">
+        <mat-select placeholder="User Type *" formControlName="userType">
+          <mat-option *ngFor="let userType of userTypes" [value]="userType">
+            {{userType}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div style="width: 100%; text-align: right">
+        <button mat-flat-button color="accent" style="color: red" (click)="registerUser()">
+          Register
+        </button>
+      </div>
+  </form>
 </mat-card>

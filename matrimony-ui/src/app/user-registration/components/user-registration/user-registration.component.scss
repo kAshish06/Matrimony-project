@@ -1,0 +1,17 @@
+.registration-detail-item {
+    display: flex;
+    flex-direction: column;
+}
+.registration-detail-item > * {
+    width: 100%  
+}
+
+.registration-detail-item-inline {
+    width: 31.5%;
+    padding: 0px 5px
+}
+@media only screen and (max-width: 768px) {
+    .registration-detail-item-inline {
+        width: 100%
+    }
+}
