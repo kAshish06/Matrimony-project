@@ -1,0 +1,7 @@
+.registration-detail-item {
+    display: flex;
+    flex-direction: column;
+}
+.registration-detail-item > * {
+    width: 100%  
+  }

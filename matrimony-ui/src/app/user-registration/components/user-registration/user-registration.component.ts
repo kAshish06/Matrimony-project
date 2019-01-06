@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-registration.component.css']
 })
 export class UserRegistrationComponent implements OnInit {
-
+  public userTypes: string[];
   constructor() { }
 
   ngOnInit() {
+    this.userTypes = [
+      'District Officer',
+      'Block Officer',
+      'Admin'
+    ]
   }
 
 }

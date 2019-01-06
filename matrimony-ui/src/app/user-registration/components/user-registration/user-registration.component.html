@@ -1,3 +1,26 @@
-<p>
-  user-registration works!
-</p>
+<div style=" width: 50%; margin: 5px auto; color: red; font-size: 20px">
+  Registration
+</div>
+<mat-card style="background-color: #fff; width: 50%; margin: 10px auto">
+  <mat-form-field class="registration-detail-item">
+    <input matInput placeholder="Name">
+  </mat-form-field>
+  <mat-form-field class="registration-detail-item">
+    <input matInput placeholder="Email">
+  </mat-form-field>
+  <mat-form-field class="registration-detail-item">
+    <input matInput placeholder="Mobile/phone">
+  </mat-form-field>
+  <mat-form-field class="registration-detail-item">
+    <mat-select placeholder="User Type">
+      <mat-option *ngFor="let userType of userTypes" [value]="userType">
+        {{userType}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div style="width: 100%; text-align: right">
+    <button mat-flat-button color="accent" style="color: red">
+      Register
+    </button>
+  </div>
+</mat-card>

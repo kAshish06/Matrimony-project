@@ -1,5 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatFormFieldModule, 
+  MatInputModule,
+  MatSelectModule
+} from '@angular/material';
 
 import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
 
@@ -8,7 +15,12 @@ import { UserRegistrationComponent } from './components/user-registration/user-r
   entryComponents: [UserRegistrationComponent],
   exports: [UserRegistrationComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule
   ]
 })
 export class UserRegistrationModule { }
