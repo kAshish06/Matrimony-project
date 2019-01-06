@@ -6,7 +6,7 @@ import { UserRegistrationService } from '../../services/user-registration.servic
 @Component({
   selector: 'app-user-registration',
   templateUrl: './user-registration.component.html',
-  styleUrls: ['./user-registration.component.css']
+  styleUrls: ['./user-registration.component.scss']
 })
 export class UserRegistrationComponent implements OnInit {
   public userTypes: string[];
