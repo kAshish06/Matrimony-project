@@ -1,0 +1,11 @@
+<div class="landing-nav">
+  <ul style="">
+    <li><a>Home</a></li>
+    <li (click)="navigateToDashboard()"><a>Dashboard</a></li>
+    <li (click)="navigateToRegistration()"><a>Register</a></li>
+    <li style="border: none" (click)="openLoginDialog()"><a>Login</a></li>
+  </ul>
+</div>
+<div *ngIf="showLoginDialog">
+  <matr-login (loginDialogCloseEvent)="closeLoginDialog()" (loginDetailsSubmitEvent)="startLogin($event)"></matr-login>
+</div>

@@ -1,0 +1,37 @@
+.login-dialog-container {
+    position: fixed;
+    z-index: 100;
+    background-color: black;
+    opacity: .5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: none
+}
+
+.login-dialog {
+    position: fixed;
+    z-index: 200;
+    width: 36%;
+    top: 30%;
+    left: 32%;
+    color: yellow;
+    .login-head {
+        font-size: 26px;
+        color: #263238;
+        text-align: center;
+        margin: 10px 0px
+    }
+    .login-close {
+        width: 100%;
+        text-align: right
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .login-dialog {
+        width: 80%;
+        left: 10%;
+    }
+}

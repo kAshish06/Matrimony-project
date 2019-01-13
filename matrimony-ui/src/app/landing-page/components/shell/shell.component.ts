@@ -7,16 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./shell.component.scss']
 })
 export class ShellComponent implements OnInit {
-
-  constructor(
-    private router: Router
-  ) { }
+  private showLoginDialog = false;
+  constructor() { }
 
   ngOnInit() {
   }
 
-  public navigateToRegistration() {
-    console.log('navigateToRegistration')
-    this.router.navigateByUrl('/registration');
-  }
+  public s
 }
