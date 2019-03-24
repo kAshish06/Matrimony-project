@@ -1,0 +1,21 @@
+.dashboard-header {
+    height: 100px;
+    width: 100%;
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+    img {
+        float: right;
+        height: 90px;
+        width: 90px;
+    }
+}
+
+.tab-label {
+    padding: 10px;
+    font-size: 15px
+}
+
+.main-content-container {
+    display: inline-block;
+    width: 78%
+}

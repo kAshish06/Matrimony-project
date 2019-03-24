@@ -29,6 +29,24 @@
     }
 }
 
+.register-free {
+    text-align: center;
+    color: orange;
+    font-size: 17px;
+    margin-top: 10px
+}
+
+.login-btn {
+    width: 90%;
+    background-color: red;
+    color: white
+}
+
+.close-icon {
+    font-size: 20px;
+    color: #ddd;
+    cursor: pointer
+}
 @media only screen and (max-width: 768px) {
     .login-dialog {
         width: 80%;

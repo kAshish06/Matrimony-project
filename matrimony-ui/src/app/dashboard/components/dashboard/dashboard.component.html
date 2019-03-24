@@ -1,3 +1,26 @@
-<p>
-  dashboard works!
-</p>
+<!-- <div>
+  <div class="dashboard-header">
+    Welcome TestUser..!!
+    <img src="assets/dashboard/default-user.png" />
+  </div>
+  <div>
+    <mat-tab-group>
+      <mat-tab *ngFor="let tab of tabs">
+        <ng-template mat-tab-label>
+          <i class="{{ tab.icon }}"></i>
+          <span class="tab-label">{{ tab.label }}</span>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+    <div class="main-content-container">
+      Content display area 
+    </div>
+  </div>
+</div> -->
+<div style="height: 600px; padding: 30px">
+  <span>Select a file - </span>
+  <input #select type="file" [(ngModel)]="selectedFile" (change)="fileSelectionHandler(event)" />
+  <div #dropzone style="margin-top: 100px; width: 400px; height: 400px; margin: 30px auto; border: 1px solid #ccc"
+    (dragenter)="dropZoneEnter($event)" (dragover)="dropZoneOver($event)" (drop)="dropZoneDrop($event)">Drag
+    and drop your files here</div>
+</div>

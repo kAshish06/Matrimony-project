@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatCardModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 import { LoginComponent } from './login.component';
 
 describe('LoginComponent', () => {
@@ -8,7 +10,14 @@ describe('LoginComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
+      declarations: [ LoginComponent ],
+      imports: [
+        BrowserAnimationsModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule
+      ]
     })
     .compileComponents();
   }));

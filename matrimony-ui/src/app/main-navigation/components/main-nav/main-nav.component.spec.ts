@@ -1,6 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { MainNavComponent } from './main-nav.component';
+
+@Component({
+  selector: 'matr-login',
+  template: ''
+})
+class FakeLoginComponent {
+
+}
 
 describe('MainNavComponent', () => {
   let component: MainNavComponent;
@@ -8,7 +18,16 @@ describe('MainNavComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainNavComponent ]
+      declarations: [
+        MainNavComponent,
+        FakeLoginComponent
+      ],
+      providers: [
+        {
+          provide: Router,
+          useValue: {}
+        }
+      ]
     })
     .compileComponents();
   }));

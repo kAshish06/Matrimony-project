@@ -4,28 +4,28 @@
   <mat-card>
     <div>
       <div class="login-close">
-        <i class="fas fa-times" style="font-size: 20px; color: #ddd; cursor: pointer" (click)="close()"></i>
+        <i class="fas fa-times close-icon" (click)="close()"></i>
       </div>
       <div class="login-head">
         Login using your email id 
       </div>
     </div>
-    <form [formGroup]="loginFormGroup" style="width: 90%; margin: auto">
+    <form [formGroup]="loginFormGroup" style="width: 90%; margin: auto" (ngSubmit)="login()">
       <mat-form-field style="width: 100%">
-        <input matInput type="text" placeholder="User name" formControlName="userName"/>
+        <input matInput type="email" placeholder="Email" formControlName="userName"/>
       </mat-form-field>
       <mat-form-field style="width: 100%">
           <input matInput type="password" placeholder="Password" formControlName="password"/>
       </mat-form-field>
-    </form>
-    <div style="text-align: right; color: orange">
-      <a>Forgot password ?</a>
-    </div>
-    <div style="text-align: center; margin-top: 25px">
-        <button style="width: 90%; background-color: red; color: white" type="button" mat-flat-button color="accent" (click)="login()">Login</button>
-    </div>
-    <div style="text-align: center; color: orange; font-size: 17px; margin-top: 10px">
-        <a>Register for free</a>
+      <div style="text-align: right; color: orange">
+        <a>Forgot password ?</a>
       </div>
+      <div style="text-align: center; margin-top: 25px">
+        <button class="login-btn" type="submit" mat-flat-button color="accent">Login</button>
+      </div>
+    </form>
+    <div class="register-free">
+      <a>Register for free</a>
+    </div>
   </mat-card>
 </div>

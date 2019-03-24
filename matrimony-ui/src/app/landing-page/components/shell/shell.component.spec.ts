@@ -1,6 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShellComponent } from './shell.component';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'matr-main-nav',
+  template: ''
+})
+class FakeMainNavComponent {
+
+}
 
 describe('ShellComponent', () => {
   let component: ShellComponent;
@@ -8,7 +17,10 @@ describe('ShellComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ShellComponent ]
+      declarations: [
+        FakeMainNavComponent,
+        ShellComponent
+      ]
     })
     .compileComponents();
   }));
