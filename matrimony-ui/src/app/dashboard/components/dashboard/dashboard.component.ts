@@ -66,6 +66,7 @@ export class DashboardComponent implements OnInit {
   }
 
   handlePdf(files: any[]) {
-
+    //this is operation on selected files will go. 
+    //either use ceateObjectUrl or something else 
   }
 }
