@@ -62,11 +62,10 @@ export class DashboardComponent implements OnInit {
     let files = dt.files
     console.log(event.dataTransfer);
     this.handlePdf(event.dataTransfer.files);
-    // no operation here
+    // no operation here, same here 
   }
 
   handlePdf(files: any[]) {
-    //this is operation on selected files will go. 
-    //either use ceateObjectUrl or something else 
+    //Ashish modified these comments
   }
 }
