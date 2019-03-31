@@ -65,5 +65,6 @@ export class DashboardComponent implements OnInit {
   }
 
   handlePdf(files: any[]) {
+    //added comment in hadlefiles on master
   }
 }
