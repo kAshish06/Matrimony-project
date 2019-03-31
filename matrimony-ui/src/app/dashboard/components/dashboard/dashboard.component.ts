@@ -62,10 +62,8 @@ export class DashboardComponent implements OnInit {
     let files = dt.files
     console.log(event.dataTransfer);
     this.handlePdf(event.dataTransfer.files);
-    // no operation here, same here 
   }
 
   handlePdf(files: any[]) {
-    //Ashish modified these comments
   }
 }
