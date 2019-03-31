@@ -62,12 +62,8 @@ export class DashboardComponent implements OnInit {
     let files = dt.files
     console.log(event.dataTransfer);
     this.handlePdf(event.dataTransfer.files);
-    //added comments in dropzonedrop on try-merge branch
-    //added comment in dropzonedrop, local only on try-merge branch 
   }
 
   handlePdf(files: any[]) {
-    //added comment in handlefiles on master
-    //added comments in handlefiles, local commit on master
   }
 }
