@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Tesseract } from 'tesseract.js/dist/tesseract';
 
 interface userTabs {
   label: string;
@@ -35,14 +36,26 @@ export class DashboardComponent implements OnInit {
   ]
   @ViewChild('select', {read: ElementRef}) select: ElementRef;
   @ViewChild('dropzone', {read: ElementRef}) dropzone: ElementRef;
+  @ViewChild('preview', {read: ElementRef}) preview: ElementRef;
   constructor() { }
 
   ngOnInit() {
+    console.log(Tesseract);
   }
 
   fileSelectionHandler(event) {
     console.log(this.selectedFile);
     console.log(this.select.nativeElement.files);
+    let pdfImage = document.createElement('embed');
+    let pdfObj = window.URL.createObjectURL(this.select.nativeElement.files[0]);
+    pdfImage.src = pdfObj;
+    pdfImage.width = '300px';
+    pdfImage.height = '500px';
+    this.preview.nativeElement.appendChild(pdfImage);
+    Tesseract.recognise(pdfObj)
+      .then((result) => {
+        console.log(result);
+      })
   }
 
   dropZoneEnter(event) {

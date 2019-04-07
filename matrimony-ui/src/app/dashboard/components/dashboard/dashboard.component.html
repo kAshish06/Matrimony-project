@@ -20,7 +20,8 @@
 <div style="height: 600px; padding: 30px">
   <span>Select a file - </span>
   <input #select type="file" [(ngModel)]="selectedFile" (change)="fileSelectionHandler(event)" />
-  <div #dropzone style="margin-top: 100px; width: 400px; height: 400px; margin: 30px auto; border: 1px solid #ccc"
+  <div #dropzone style="margin-top: 100px; width: 200px; height: 200px; margin: 30px auto; border: 1px solid #ccc"
     (dragenter)="dropZoneEnter($event)" (dragover)="dropZoneOver($event)" (drop)="dropZoneDrop($event)">Drag
     and drop your files here</div>
+  <div #preview></div>
 </div>
