@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Tesseract } from 'tesseract.js/dist/tesseract';
+import * as Tesseract  from 'tesseract.js';
 
 interface userTabs {
   label: string;
@@ -11,6 +11,7 @@ interface userTabs {
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  public tesseract: any;
   public selectedFile: any;
   public tabs: userTabs[] = [
     {
@@ -37,22 +38,37 @@ export class DashboardComponent implements OnInit {
   @ViewChild('select', {read: ElementRef}) select: ElementRef;
   @ViewChild('dropzone', {read: ElementRef}) dropzone: ElementRef;
   @ViewChild('preview', {read: ElementRef}) preview: ElementRef;
-  constructor() { }
+  constructor() { 
+    this.tesseract = Tesseract.create({
+      workerPath: 'http://localhost:4200/assets/tesseract/tesseract.worker.js',
+      langPath: 'http://localhost:4200/assets/tesseract/lang/tl-',
+      corePath: 'http://localhost:4200/assets/tesseract/tesseract-core.js'
+    });
+  }
 
   ngOnInit() {
     console.log(Tesseract);
+    console.log(this.tesseract);
   }
 
   fileSelectionHandler(event) {
     console.log(this.selectedFile);
     console.log(this.select.nativeElement.files);
-    let pdfImage = document.createElement('embed');
+    // let pdfImage = document.createElement('img');
     let pdfObj = window.URL.createObjectURL(this.select.nativeElement.files[0]);
-    pdfImage.src = pdfObj;
-    pdfImage.width = '300px';
-    pdfImage.height = '500px';
-    this.preview.nativeElement.appendChild(pdfImage);
-    Tesseract.recognise(pdfObj)
+    this.preview.nativeElement.id = "pdfImage";
+    this.preview.nativeElement.src = pdfObj;
+    this.preview.nativeElement.width = 300;
+    this.preview.nativeElement.height = 500;
+    // this.preview.nativeElement.appendChild(pdfImage);
+  }
+
+  triggerImageReader() {
+    // const pdfImage = document.getElementById('pdfImage');
+    this.tesseract.recognize(this.preview.nativeElement, {lang: 'eng'})
+      .progress((result) => {
+        console.log(result);
+      })
       .then((result) => {
         console.log(result);
       })

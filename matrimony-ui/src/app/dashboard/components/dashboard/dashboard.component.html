@@ -23,5 +23,6 @@
   <div #dropzone style="margin-top: 100px; width: 200px; height: 200px; margin: 30px auto; border: 1px solid #ccc"
     (dragenter)="dropZoneEnter($event)" (dragover)="dropZoneOver($event)" (drop)="dropZoneDrop($event)">Drag
     and drop your files here</div>
-  <div #preview></div>
+    <button (click)="triggerImageReader()">trigge image reader</button>
+  <img #preview />
 </div>
